@@ -97,6 +97,10 @@ class HorizonServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../config/horizon.php' => config_path('horizon.php'),
             ], 'horizon-config');
+
+            $this->publishes([
+                __DIR__.'/../resources/views' => resource_path('views/vendor/horizon'),
+            ],'horizon-views');
         }
     }
 
